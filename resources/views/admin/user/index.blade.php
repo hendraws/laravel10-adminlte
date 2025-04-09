@@ -50,6 +50,7 @@
         $(function() {
 
             console.log('asdasd');
+            console.log('test');
             $(document).on('click', '.delete', function(e) {
                 e.preventDefault();
                 let url = $(this).data('url');
