@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ config('app.desciption', 'APLIKASI') }}" />
-    
+
     <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
 
     <!-- CSRF Token -->
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('/') }}plugins/fontawesome-free/css/all.min.css" />
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('/') }}dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="{{ asset('/plugins/sweetalert2/sweetalert2.min.css') }}">
     @yield('css')
 </head>
 
@@ -69,7 +70,31 @@
     <script src="{{ asset('/') }}dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('/') }}dist/js/demo.js"></script>
+    <script src="{{ asset('/') }}js/script.js"></script>
+    <script src="{{ asset('plugins\sweetalert2\sweetalert2.all.min.js') }}"></script>
     @yield('js')
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil',
+                text: "{{ session('success') }}",
+                showConfirmButton: true,
+                timer: 3000
+            });
+        </script>
+    @endif
+    @if (session('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Kesalahan',
+                text: "{{ session('error') }}",
+                showConfirmButton: true,
+                timer: 3000
+            });
+        </script>
+    @endif
 </body>
 
 </html>
