@@ -47,7 +47,7 @@
 
     <script>
         $(function() {
-
+            console.log('test');
             $(document).on('click', '.delete', function(e) {
                 e.preventDefault();
                 let url = $(this).data('url');
