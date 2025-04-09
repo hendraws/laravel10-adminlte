@@ -49,6 +49,7 @@
     <script>
         $(function() {
 
+            console.log('asdasd');
             $(document).on('click', '.delete', function(e) {
                 e.preventDefault();
                 let url = $(this).data('url');
