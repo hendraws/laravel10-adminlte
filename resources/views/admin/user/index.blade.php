@@ -45,6 +45,9 @@
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap4.js"></script>
     <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.bootstrap4.js"></script>
 
+
+
+
     <script>
         $(function() {
             console.log('test');
